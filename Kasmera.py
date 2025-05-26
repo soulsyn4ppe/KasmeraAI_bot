@@ -2,7 +2,8 @@ from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 from keep_alive import keep_alive  # Untuk uptime di Replit
 
-TOKEN = "7724366486:AAHCDcl7Ky_-1A9eUdENbsTi0ET7lJUPeyQ"
+import os
+TOKEN = os.getenv("TOKEN")
 
 def start(update: Update, context: CallbackContext):
     update.message.reply_text("Kasmera mendengar. Kau tak keseorangan.")
